@@ -1,15 +1,16 @@
 spring:
   application:
     name: server
-  
-  # PostgreSQL Configuration
+
+  # Default PostgreSQL Configuration
+  # This points to localhost for local development when running `docker-compose up -d postgres`
+  # When running inside docker-compose for the full stack, environment variables in docker-compose.yml will override this URL to point to the 'postgres' container.
   datasource:
-    url: jdbc:postgresql://postgres:5432/mydatabase
+    url: jdbc:postgresql://localhost:5432/mydatabase
     username: root
     password: password
     driver-class-name: org.postgresql.Driver
     
-  # JPA Configuration
   jpa:
     hibernate:
       ddl-auto: update

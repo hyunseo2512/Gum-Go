@@ -15,6 +15,14 @@ Quick Start
 * 서비스 상태 확인: docker compose ps
 * 서비스 종료: docker compose down
 
+Local Development
+-----------------
+
+로컬 개발(IDE 등에서 앱만 구동) 시에는 Docker로 PostgreSQL 데이터베이스만 띄워놓고 연결할 수 있습니다.
+
+* DB 컨테이너만 백그라운드 구동: docker compose up -d postgres
+* 앱 빌드 및 실행: ./gradlew bootRun
+* 접속 주소: http://localhost:8080/ (Thymeleaf 템플릿 화면)
 
 Infrastructure
 --------------
